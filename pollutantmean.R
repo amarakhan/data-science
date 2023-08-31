@@ -6,8 +6,8 @@
 # particulate matter data from the directory specified in the 'directory'
 # argument and returns the mean of the pollutant across all of the monitors, ignoring any missing values coded as NA. A prototype of the function is as follows
 
-pollutantmean <- function(dir, pollutant, id=1:332) {
-  # dir : 
+pollutantmean <- function(directory, pollutant, id=1:332) {
+  # directory : 
   # - char vector of length 1
   # - indicating the location of the CSV files
   
@@ -19,7 +19,7 @@ pollutantmean <- function(dir, pollutant, id=1:332) {
   data_list <- list()
   
   for(i in id) {
-    file_path <- sprintf("%s/%03d.csv", dir, i)
+    file_path <- sprintf("%s/%03d.csv", directory, i)
     data <- read.csv(file_path)
     data_list[[i]] <- data
   }
