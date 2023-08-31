@@ -6,6 +6,13 @@
 
 
 complete <- function(directory, id = 1:332) {
+  
+  # directory :
+  # - char vector of length 1
+  # - indicating the location of the CSV file
+  
+  # id :
+  # - integer vector indicating the monitor ID numbers to be used
 
   results <- data.frame(id = integer(0), nobs = integer(0))
   
